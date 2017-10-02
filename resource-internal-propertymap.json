@@ -1,0 +1,77 @@
+
+[
+  {
+    "parentcollection": "/oic/res/",
+    "linkattributes": {
+      "href": "/example/freezer/temperature",
+      "rt": ["oic.r.temperature", "oic.r.conditionalnotification"],
+      "if": ["oic.if.s", "oic.if.r", "oic.if.rw", "oic.if.baseline"],
+      "ins": "freezer.temperature",
+      "title": "Freezer Temperature",
+      "p": { "bm": 3 }
+    },
+    "links": [
+      {
+        "rel": "self",
+        "href": "/example/freezer/temperature",
+        "rt": ["oic.r.temperature", "oic.r.conditionalnotification"],
+        "if": ["oic.if.s", "oic.if.r", "oic.if.rw", "oic.if.baseline"],
+        "ins": "freezer.temperature",
+        "title": "Freezer Temperature",
+        "p": { "bm": 3 }
+      }
+    ],
+    "properties": {
+      "rt": {
+        "rt": ["oic.r.temperature", "oic.r.conditionalnotification"],
+        "if": ["oic.if.baseline"],
+        "value":  ["oic.r.temperature", "oic.r.conditionalnotification"]
+      },
+      "if": {
+        "rt": ["oic.r.temperature", "oic.r.conditionalnotification"],
+        "if": ["oic.if.baseline"],
+        "value":  ["oic.if.s", "oic.if.r", "oic.if.rw", "oic.if.baseline"]
+      },
+      "id": {
+        "rt": ["oic.r.temperature", "oic.r.conditionalnotification"],
+        "if": ["oic.if.baseline"],
+        "value": "freezer.temperature"
+      },
+      "n": {
+        "rt": ["oic.r.temperature", "oic.r.conditionalnotification"],
+        "if": ["oic.if.baseline"],
+        "value": "Freezer Temperature"
+      },
+      "range": {
+        "rt": ["oic.r.temperature"],
+        "if": ["oic.if.r"],
+        "value": [0,100]
+      },
+      "units": {
+        "rt": ["oic.r.temperature"],
+        "if": ["oic.if.r"],
+        "value": "C"
+      },
+      "temperature": {
+        "rt": ["oic.r.temperature"],
+        "if": ["oic.if.s"],
+        "value": 0
+      },
+      "minnotifyperiod": {
+        "rt": ["oic.r.conditionalnotification"],
+        "if": ["oic.if.r", "oic.if.rw"],
+        "value": 10
+      },
+      "maxnotifyperiod": {
+        "rt": ["oic.r.conditionalnotification"],
+        "if": ["oic.if.r", "oic.if.rw"],
+        "value": 600
+      },
+      "threshold": {
+        "rt": ["oic.r.conditionalnotification"],
+        "if": ["oic.if.r", "oic.if.rw"],
+        "value": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "comment": "OCF Resource Instance Definition Format example",
+  "resourcePath": "/example/",
+  "discoverable": true,
+  "observable": true,
+  "additionalLinkAttributes": {
+    "title": "Refrigerator Example",
+    "ins": "refrigerator"
+  },
+  "defaultInterface": ["oic.if.b"],
+  "commonProperties": [
+    {
+      "name": "id",
+      "interfaces": ["oic.if.baseline"],
+      "value": "refrigerator"
+    },
+    {
+      "name": "n",
+      "interfaces": ["oic.if.baseline"],
+      "value": "Refrigerator example"
+    }
+  ],
+  "resourceTypes": [
+    {
+      "type": "oic.d.thermostat",
+      "properties": []
+    },
+    {
+      "type": "oic.wk.col",
+      "properties": [
+        {
+          "name": "rts",
+          "interfaces": ["oic.if.baseline"],
+          "value": ["oic.r.temperature", "oic.r.conditionalnotification"]
+        },
+        {
+          "name": "links",
+          "interfaces": ["oic.if.ll", "oic.if.b"],
+          "value": [
+            {
+              "href": "/example/refrigerator/temperature",
+              "rt": ["oic.r.temperature"],
+              "if": ["oic.if.s"],
+              "ins": "refrigerator.temperature",
+              "title": "Refrigerator Temperature"
+            },
+            {
+              "href": "/example/refrigerator/set-temperature",
+              "rt": ["oic.r.temperature"],
+              "if": ["oic.if.a"],
+              "ins": "refrigerator.temperature.setpoint",
+              "title": "Refrigerator Temperature Setpoint"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

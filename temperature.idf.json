@@ -1,0 +1,65 @@
+{
+  "comment": "OCF Resource Instance Definition Format example",
+  "resourcePath": "/example/refrigerator/temperature",
+  "discoverable": true,
+  "observable": true,
+  "additionalLinkAttributes": {
+    "title": "Refrigerator Temperature",
+    "ins": "refrigerator"
+  },
+  "defaultInterface": ["oic.if.b"],
+  "commonProperties": [
+    {
+      "name": "id",
+      "interfaces": ["oic.if.baseline"],
+      "value": "refrigerator.temperature"
+    },
+    {
+      "name": "n",
+      "interfaces": ["oic.if.baseline"],
+      "value": "Refrigerator example"
+    }
+  ],
+  "resourceTypes": [
+    {
+      "type": "oic.r.temperature",
+      "properties": [
+        {
+          "name": "temperature",
+          "interfaces": ["oic.if.s"],
+          "value": 10
+        },
+        {
+          "name": "range",
+          "interfaces": ["oic.if.r"],
+          "value": [0,100]
+        },
+        {
+          "name": "units",
+          "interfaces": ["oic.if.r"],
+          "value": "C"
+        }
+      ]
+    },
+    {
+      "type": "oic.r.notification.conditional",
+      "properties": [
+        {
+          "name": "minnnotifyperiod",
+          "interfaces": ["oic.if.r", "oic.if.rw"],
+          "value": 10
+        },
+        {
+          "name": "maxnotifyperiod",
+          "interfaces": ["oic.if.r", "oic.if.rw"],
+          "value": 600
+        },
+        {
+          "name": "threshold",
+          "interfaces": ["oic.if.r", "oic.if.rw"],
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
